@@ -15,6 +15,7 @@ extension UIViewController   {
                 return subview as! DeleteView
             }
         }
+        //
         return DeleteView(frame: CGRect(x: SettingVariabels.screenBounds.width/2 ,
                                         y: SettingVariabels.screenBounds.height + 10, width: 50, height: 50))
     }                                                                      
