@@ -1,3 +1,3 @@
 # CollectionItemDeletion
 similar to facebook massenger chat head deletion 
-![](tenor.gif)
+![](amalhaririy/CollectionItemDeletion/tenor.gif)
