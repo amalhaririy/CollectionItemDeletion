@@ -15,7 +15,6 @@ extension UIViewController   {
                 return subview as! DeleteView
             }
         }
-        //
         return DeleteView(frame: CGRect(x: SettingVariabels.screenBounds.width/2 ,
                                         y: SettingVariabels.screenBounds.height + 10, width: 50, height: 50))
     }                                                                      
@@ -161,7 +160,7 @@ extension UIViewController   {
                                                                     }
                                                                     
                                                                     collectionView.performBatchUpdates({
-                                                                        collectionView.deletionDelegate!.insert(item: SettingVariabels.deletedItem , at: SettingVariabels.snapshotIndexPath!.row)
+                                                                        collectionView.deletionDelegate!.insert(item: SettingVariabels.deletedItem! , at: SettingVariabels.snapshotIndexPath!.row)
                                                                        collectionView.insertItems(at: [SettingVariabels.snapshotIndexPath!])
                                                                        
                                                                     },  completion: { (result) in
@@ -185,7 +184,7 @@ extension UIViewController   {
                                                            delay: 0,
                                                            options: [],
                                                            animations: {
-                                                            let hidePoint = CGPoint(x: SettingVariabels.screenBounds.width/2 , y: SettingVariabels.screenBounds.height )
+                                                            let hidePoint = CGPoint(x: SettingVariabels.screenBounds.width/2 , y: SettingVariabels.screenBounds.height + self.recycleBinView.bounds.height )
                                                             self.recycleBinView.center  = hidePoint
                                                             if SettingVariabels.isItemDeleted || velocity >= 15 {
                                                                 SettingVariabels.snapshotView!.center = hidePoint
