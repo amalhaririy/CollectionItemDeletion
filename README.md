@@ -1,6 +1,6 @@
 # CollectionItemDeletion
 
-![](https://github.com/amalhaririy/CollectionItemDeletion/blob/master/CollectionItemDeletion/tenor.gif)
+![](deletion.gif)
 
 similar to facebook massenger chat head deletion 
 
