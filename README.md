@@ -16,22 +16,24 @@ CocoaPods
 Tested with pod --version: 1.3.1
 
 # Podfile
-use_frameworks!
+    use_frameworks!
 
-target 'YOUR_TARGET_NAME' do
-    pod 'CollectionItemDeletion'
-end
+     target 'YOUR_TARGET_NAME' do
+      pod 'CollectionItemDeletion'
+     end
 
 then type:
 
-$ pod install
+     $ pod install
 
 # usage
-import CollectionItemDeletion
-yourCollectionView.setupCollectionItsmdeletion()
-yourCollectionView.deletionDelegate = self
 
-extension yourView:CollectionItemDeletionDelegate{
+     import CollectionItemDeletion
+     yourCollectionView.setupCollectionItsmdeletion()
+     yourCollectionView.deletionDelegate = self
+
+    extension yourView : CollectionItemDeletionDelegate {
+
     func item(at index: Int) -> Any {
         return yourCollectionArray![index]
     }
@@ -45,5 +47,5 @@ extension yourView:CollectionItemDeletionDelegate{
     func deleteItem(at index: Int) {
          yourCollectionView.remove(at: index)
     }
-    }
+    
     
