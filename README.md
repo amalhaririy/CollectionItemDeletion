@@ -28,24 +28,27 @@ then type:
 
 # usage
 
-     import CollectionItemDeletion
+    import CollectionItemDeletion
+     
      yourCollectionView.setupCollectionItsmdeletion()
      yourCollectionView.deletionDelegate = self
 
     extension yourView : CollectionItemDeletionDelegate {
 
-    func item(at index: Int) -> Any {
-        return yourCollectionArray![index]
-    }
+                func item(at index: Int) -> Any {
+                    return yourCollectionArray![index]
+                }
+
+                func insert(item: Any, at index: Int) {
+                     yourCollectionView.insert(item as! yourCollectionArrayType , at: index)
+                }
+
+
+
+                func deleteItem(at index: Int) {
+                     yourCollectionView.remove(at: index)
+                }
     
-    func insert(item: Any, at index: Int) {
-         yourCollectionView.insert(item as! yourCollectionArrayItemType , at: index)
-    }
-    
-    
-    
-    func deleteItem(at index: Int) {
-         yourCollectionView.remove(at: index)
     }
     
     
