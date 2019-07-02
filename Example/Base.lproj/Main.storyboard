@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jLG-aX-a86">
-                                <rect key="frame" x="0.0" y="398" width="414" height="100"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="383" width="414" height="130"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="mDL-JO-e7n"/>
+                                    <constraint firstAttribute="height" constant="130" id="mDL-JO-e7n"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="o2V-cy-nsL">
                                     <size key="itemSize" width="50" height="50"/>
@@ -32,7 +32,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="vvE-Ub-uRd">
-                                        <rect key="frame" x="0.0" y="25" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -41,12 +41,48 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rr5-9g-qA7">
+                                <rect key="frame" x="25" y="59" width="80" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="09v-Jd-3pr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="19"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="0.40784313729999999" green="0.40784313729999999" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nNs-RB-G7D"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collection Item Deletion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5SW-I0-2Oi">
+                                <rect key="frame" x="56.5" y="299" width="301.5" height="34"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="31"/>
+                                <color key="textColor" red="0.40784313729999999" green="0.40784313729999999" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="o4a-hX-sHI">
+                                <rect key="frame" x="112" y="107" width="190" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="190" id="v4c-uA-MoS"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Horizental"/>
+                                    <segment title="Vertical"/>
+                                </segments>
+                                <color key="tintColor" red="0.3803921569" green="0.4039215686" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jLG-aX-a86" secondAttribute="trailing" id="3PZ-Pn-lmO"/>
                             <constraint firstItem="jLG-aX-a86" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="99M-DC-x7a"/>
+                            <constraint firstItem="jLG-aX-a86" firstAttribute="top" secondItem="5SW-I0-2Oi" secondAttribute="bottom" constant="50" id="9G0-O2-vWj"/>
+                            <constraint firstItem="5SW-I0-2Oi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HyG-i6-agr"/>
                             <constraint firstItem="jLG-aX-a86" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Mxe-Ua-Jrh"/>
+                            <constraint firstItem="o4a-hX-sHI" firstAttribute="top" secondItem="rr5-9g-qA7" secondAttribute="bottom" constant="15" id="ZEh-3s-Net"/>
+                            <constraint firstItem="rr5-9g-qA7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="bNC-8G-doc"/>
+                            <constraint firstItem="rr5-9g-qA7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="bsY-Bv-RVm"/>
+                            <constraint firstItem="o4a-hX-sHI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iiB-io-ybS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -56,6 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="22.767857142857142"/>
         </scene>
     </scenes>
 </document>

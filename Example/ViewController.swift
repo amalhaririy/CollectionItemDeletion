@@ -10,8 +10,8 @@ import UIKit
 import CollectionItemDeletion
 class ViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
-    
-    var collectionArray1 = [1,2,3,4,5,6,7,8,9,10]
+    let images = ["1", "2" ,"3","4","5","6","7","8","9","10","11","12","13","14","15"]
+    var imagesArray = ["1", "2" ,"3","4","5","6","7","8","9","10","11","12","13","14","15"]
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
@@ -26,20 +26,25 @@ class ViewController: UIViewController {
         collectionView.register(nib, forCellWithReuseIdentifier: "VerticalCollectionCell")
     }
     
-
+    @IBAction func resetButton(_ sender: Any) {
+       imagesArray = images
+        collectionView.reloadData()
+    }
+    
 }
 
 extension ViewController : UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return collectionArray1.count
+        return imagesArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VerticalCollectionCell", for: indexPath) as! VerticalCollectionCell
+        cell.imageView.image = UIImage(named: imagesArray[indexPath.row])
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 80, height: 80)
+        return CGSize(width: 110, height: 110)
     }
     
 }
@@ -51,17 +56,17 @@ extension ViewController : CollectionItemDeletionDelegate {
     
     
     func item(at index: Int) -> Any {
-        return collectionArray1[index]
+        return imagesArray[index]
     }
     
     func insert(item: Any, at index: Int) {
-        collectionArray1.insert(item as! Int , at: index)
+        imagesArray.insert(item as! String , at: index)
     }
     
     
     
     func deleteItem(at index: Int) {
-        collectionArray1.remove(at: index)
+        imagesArray.remove(at: index)
     }
     
 }

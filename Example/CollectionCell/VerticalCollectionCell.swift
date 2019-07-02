@@ -10,9 +10,12 @@ import UIKit
 
 class VerticalCollectionCell: UICollectionViewCell {
 
+    @IBOutlet weak var XView: UIView!
+    @IBOutlet weak var imageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        XView.layer.cornerRadius = 15
     }
 
 }
