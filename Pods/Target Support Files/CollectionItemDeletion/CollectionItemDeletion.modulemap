@@ -1,0 +1,6 @@
+framework module CollectionItemDeletion {
+  umbrella header "CollectionItemDeletion-umbrella.h"
+
+  export *
+  module * { export * }
+}

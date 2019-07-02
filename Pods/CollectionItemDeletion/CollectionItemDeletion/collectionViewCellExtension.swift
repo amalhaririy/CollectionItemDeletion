@@ -19,5 +19,4 @@ extension UICollectionViewCell{
         snapshot?.alpha = 0.9
         snapshot?.center = center
         return snapshot
-        
     }}

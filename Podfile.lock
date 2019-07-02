@@ -1,0 +1,16 @@
+PODS:
+  - CollectionItemDeletion (0.1.0)
+
+DEPENDENCIES:
+  - CollectionItemDeletion
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CollectionItemDeletion
+
+SPEC CHECKSUMS:
+  CollectionItemDeletion: bb1095014d4e126d8187028c550cbcb78798bc69
+
+PODFILE CHECKSUM: bcde1f0aa957f045a6140699a60c22b68302650a
+
+COCOAPODS: 1.7.0.beta.3
