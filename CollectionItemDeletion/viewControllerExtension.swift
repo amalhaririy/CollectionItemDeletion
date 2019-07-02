@@ -32,6 +32,7 @@ extension UIViewController   {
             guard let indexPath = indexPath ,  let cell = collectionView.cellForItem(at: indexPath) else{
                 return
             }
+            
             SettingVariabels.reset()
             SettingVariabels.snapshotView = cell.snapshotView(afterScreenUpdates: true)
             self.view.addSubview(SettingVariabels.snapshotView!)
